@@ -1,13 +1,8 @@
 package model
 
 import (
-	"fmt"
 )
 
 type User struct {
-	name               string
-}
-
-func (u *User) String() string {
-	return fmt.Sprintf("User(%s)", u.name)
+	Name               string//要在别的模块上应用， 字段名一定要大小，规则
 }

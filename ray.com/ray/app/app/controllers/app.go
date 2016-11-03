@@ -5,6 +5,9 @@ import (
 	"github.com/revel/revel" 
 	"ray.com/ray/app/app/model"
 )
+
+
+//http://localhost:8800/App/Hello?user.Name=ray   这样，直接绑到User.Name里了。
 type App struct {
 	*revel.Controller
 }
@@ -21,6 +24,8 @@ func (c App) Index() revel.Result {
 }
 
 
-func (c App) Hello(user *model.User) revel.Result {
+func (c App) Hello(name string, user model.User) revel.Result {
+	fmt.Printf("dddsssss"+name)
+	fmt.Printf(" user: "+user.Name)
     return c.Render("ray")
 }
