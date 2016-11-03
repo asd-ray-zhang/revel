@@ -1,0 +1,12 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<div>{{.greeting}}</div>
+
+<form action="/App/Hello" method="GET">
+    <input type="text" name="user.name" />
+    <input type="submit" value="Say hello!" />
+</form>
+
+
+{{template "footer.html" .}}
